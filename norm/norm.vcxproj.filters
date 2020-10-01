@@ -177,6 +177,15 @@
     <ClInclude Include="mod_info.h">
       <Filter>Headerdateien\mods</Filter>
     </ClInclude>
+    <ClInclude Include="20180530RE.h">
+      <Filter>Headerdateien\hooks\client_defines</Filter>
+    </ClInclude>
+    <ClInclude Include="20190508.h">
+      <Filter>Headerdateien\hooks\client_defines</Filter>
+    </ClInclude>
+    <ClInclude Include="20200304RE.h">
+      <Filter>Headerdateien\hooks\client_defines</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

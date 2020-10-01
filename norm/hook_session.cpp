@@ -17,7 +17,7 @@ int init_ping_calls = 2;
  * Search for:
  * /goldpc
  */
-#if ((CLIENT_VER <= 20180919 && CLIENT_VER >= 20180620) || CLIENT_VER_RE == 20180621)
+#if ((CLIENT_VER <= 20190508 && CLIENT_VER >= 20180620) || CLIENT_VER_RE == 20180621 || CLIENT_VER_RE == 20180530 || CLIENT_VER_RE == 20200304)
 int __fastcall ProxySession::proxyGetTalkType(void* this_obj, DWORD EDX, void* a2, int a3, int a4)
 {
 #elif CLIENT_VER == 20150000

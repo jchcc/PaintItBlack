@@ -139,12 +139,18 @@ void norm::start()
     // Search for: 12000
 #if CLIENT_VER == 20180919
     LPVOID hex_code = (LPVOID)0x0094BADE;
+#elif CLIENT_VER == 20190508
+    LPVOID hex_code = (LPVOID)0x008D59DE;
 #elif (CLIENT_VER == 20180621 || CLIENT_VER == 20180620)
     LPVOID hex_code = (LPVOID)0x0094AB1E;
 #elif CLIENT_VER == 20150000
     LPVOID hex_code = (LPVOID)0x0087344E;
 #elif CLIENT_VER_RE == 20180621
     LPVOID hex_code = (LPVOID)0x00A054CE;
+#elif CLIENT_VER_RE == 20180530
+    LPVOID hex_code = (LPVOID)0x0073AA5E;
+#elif CLIENT_VER_RE == 20200304
+    LPVOID hex_code = (LPVOID)0x00A302CE;
 #endif
     DWORD old_protect;
 

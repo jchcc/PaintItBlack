@@ -9,7 +9,7 @@ namespace norm_dll {
 void ProxyUIBookWnd::open_book()
 {
 	char* id = (char*)"pib";
-#if ((CLIENT_VER <= 20180919 && CLIENT_VER >= 20180620) || CLIENT_VER_RE == 20180621)
+#if ((CLIENT_VER <= 20190508 && CLIENT_VER >= 20180620) || CLIENT_VER_RE == 20180621 || CLIENT_VER_RE == 20180530 || CLIENT_VER_RE == 20200304)
 	SendMsg(c_bookwnd, 0x0, 0x5E, id, 0x108, 0x0, 0x0);
 #else
 	SendMsg(c_bookwnd, 0x0, 0x5E, id, 0xFD, 0x0, 0x0);

@@ -9,13 +9,22 @@ static std::shared_ptr<norm_dll::norm> c_state;
 DWORD window_mgr_addr = 0;
 
 // Search for: )  *^_^*
-#if ((CLIENT_VER <= 20180919 && CLIENT_VER >= 20180620) || CLIENT_VER_RE == 20180621)
+#if ((CLIENT_VER <= 20190508 && CLIENT_VER >= 20180620) || CLIENT_VER_RE == 20180621 || CLIENT_VER_RE == 20180530 || CLIENT_VER_RE == 20200304)
 
 #if CLIENT_VER_RE == 20180621
 DWORD UIWindowMgr_SendMsg_func = 0x00720AC0;
 
+#elif CLIENT_VER_RE == 20180530
+DWORD UIWindowMgr_SendMsg_func = 0x005D8800;
+
 #elif CLIENT_VER == 20180919
 DWORD UIWindowMgr_SendMsg_func = 0x00720610;
+
+#elif CLIENT_VER == 20190508
+DWORD UIWindowMgr_SendMsg_func = 0x006F7BB0;
+
+#elif CLIENT_VER_RE == 20200304
+DWORD UIWindowMgr_SendMsg_func = 0x0075A240;
 
 #elif (CLIENT_VER == 20180621 || CLIENT_VER == 20180620)
 DWORD UIWindowMgr_SendMsg_func = 0x0071ED80;
@@ -53,12 +62,20 @@ DWORD window_mgr_get_addr()
 DWORD get_SendMsg_addr() {
 #if CLIENT_VER == 20180919
     return 0x00720610;
+#elif CLIENT_VER == 20190508
+	return 0x006F7BB0;
+#elif CLIENT_VER == 20200304
+	return 0x0075A240;
 #elif (CLIENT_VER == 20180621 || CLIENT_VER == 20180620)
 	return 0x0071ED80;
 #elif CLIENT_VER == 20150000
 	return 0x005F4CA0;
 #elif CLIENT_VER_RE == 20180621
 	return 0x00720AC0;
+#elif CLIENT_VER_RE == 20180530
+	return 0x005D8800;
+#elif CLIENT_VER_RE == 20200304
+	return 0x0075A240;
 #endif
 }
 

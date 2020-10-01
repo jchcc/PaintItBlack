@@ -9,7 +9,7 @@ int gamemode_detour(std::shared_ptr<norm_dll::norm> c_state);
 
 bool initialize_called();
 
-#if ((CLIENT_VER <= 20180919 && CLIENT_VER >= 20150000) || CLIENT_VER_RE == 20180621)
+#if ((CLIENT_VER <= 20190508 && CLIENT_VER >= 20150000) || CLIENT_VER_RE == 20180621 || CLIENT_VER_RE == 20180530 || CLIENT_VER_RE == 20200304)
 typedef void(__thiscall *CGameMode__Initialize)(void*);
 typedef void(__thiscall *CGameMode__OnInit)(void*, const char *);
 typedef void(__thiscall *CGameMode__Zc_Npcack_Mapmove)(void*, const char *);

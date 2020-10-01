@@ -20,11 +20,20 @@ DWORD CGameMode__Initialize_func = 0x00860160;
 #elif CLIENT_VER == 20180919
 DWORD CGameMode__Initialize_func = 0x00937130;
 
+#elif CLIENT_VER == 20190508
+DWORD CGameMode__Initialize_func = 0x008BFFD0;
+
 #elif (CLIENT_VER == 20180621 || CLIENT_VER == 20180620)
 DWORD CGameMode__Initialize_func = 0x009361A0;
 
 #elif CLIENT_VER_RE == 20180621
 DWORD CGameMode__Initialize_func = 0x009F0990;
+
+#elif CLIENT_VER_RE == 20180530
+DWORD CGameMode__Initialize_func = 0x00725EF0;
+
+#elif CLIENT_VER_RE == 20200304
+DWORD CGameMode__Initialize_func = 0x00A199D0;
 
 #endif
 void __fastcall CGameMode__Initialize_hook(void* this_obj, DWORD EDX)
@@ -43,11 +52,20 @@ DWORD CGameMode__OnInit_func = 0x00866880;
 #elif CLIENT_VER == 20180919
 DWORD CGameMode__OnInit_func = 0x0093E0D0;
 
+#elif CLIENT_VER == 20190508
+DWORD CGameMode__OnInit_func = 0x008C7170;
+
 #elif (CLIENT_VER == 20180621 || CLIENT_VER == 20180620)
 DWORD CGameMode__OnInit_func = 0x0093D100;
 
 #elif CLIENT_VER_RE == 20180621
 DWORD CGameMode__OnInit_func = 0x009F7940;
+
+#elif CLIENT_VER_RE == 20180530
+DWORD CGameMode__OnInit_func = 0x0072CE80;
+
+#elif CLIENT_VER_RE == 20200304
+DWORD CGameMode__OnInit_func = 0x00A20F90;
 
 #endif
 void __fastcall CGameMode__OnInit_hook(void* this_obj, DWORD EDX, const char* a1)

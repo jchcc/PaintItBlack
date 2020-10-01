@@ -4,8 +4,8 @@
 
 #if not CI /* avoid having to uncomment below defines on each push */
 //#define CLIENT_VER 20180620 /* needs to fit the client date of the exe. */
-#define CLIENT_VER_RE 20180621
-#define DEBUG /* requires a debug-server listening on localhost:1337 */
+#define CLIENT_VER 20190508
+/* requires a debug-server listening on localhost:1337 */
 #endif
 
 /* simple macro for some debug output (used with the debug server) */
@@ -22,6 +22,14 @@
 #define DLL_VER "RO_2018-09-19Ragexe"
 #include "20180919.h"
 
+#elif CLIENT_VER == 20190508
+#define DLL_VER "RO_2019-05-08Ragexe"
+#include "20190508.h"
+
+#elif CLIENT_VER_RE == 20200304
+#define DLL_VER "RO_2020-03-04RagexeRE"
+#include "20200304RE.h"
+
 #elif CLIENT_VER == 20180621
 #define DLL_VER "RO_2018-06-21Ragexe"
 #include "20180621.h"
@@ -33,6 +41,10 @@
 #elif CLIENT_VER == 20180620
 #define DLL_VER "RO_2018-06-20#2Ragexe"
 #include "20180620.h"
+
+#elif CLIENT_VER_RE == 20180530
+#define DLL_VER "RO_2018-05-30RagexeRE"
+#include "20180530RE.h"
 
 #elif CLIENT_VER_RE == 20180621
 #define DLL_VER "RO_2018-06-21RagexeRE"

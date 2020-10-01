@@ -23,7 +23,7 @@ int info::get_talk_type(char* src, int* retval)
 	return 0;
 }
 
-#if ((CLIENT_VER <= 20180919 && CLIENT_VER >= 20180620) || CLIENT_VER_RE == 20180621)
+#if ((CLIENT_VER <= 20190508 && CLIENT_VER >= 20180620) || CLIENT_VER_RE == 20180621 || CLIENT_VER_RE == 20180530 || CLIENT_VER_RE == 20200304)
 void info::send_msg_after(void** this_obj, int* a1, void** a2, int*	  a3, int* a4, int* a5)
 #elif CLIENT_VER == 20150000
 void info::send_msg_after(void** this_obj, int* a1, int*   a2, int*   a3, int* a4, int* a5)
